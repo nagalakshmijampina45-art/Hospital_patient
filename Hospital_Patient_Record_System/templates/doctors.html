@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Doctors</h2>
+<a class="button" href="/doctors/new">Add Doctor</a>
+<table>
+<tr><th>ID</th><th>Name</th><th>Specialization</th><th>Action</th></tr>
+{% for doctor in doctors %}
+<tr>
+<td>{{ doctor.id }}</td>
+<td>{{ doctor.name }}</td>
+<td>{{ doctor.specialization }}</td>
+<td>
+<a href="/doctors/{{ doctor.id }}/edit">Edit</a>
+<form action="/doctors/{{ doctor.id }}" method="POST" class="inline"
+      onsubmit="return confirm('Delete this doctor?')">
+<input type="hidden" name="_method" value="DELETE">
+<button type="submit">Delete</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

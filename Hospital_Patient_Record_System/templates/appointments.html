@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Appointments</h2>
+<a class="button" href="/appointments/new">Schedule Appointment</a>
+<table>
+<tr>
+<th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th>
+<th>Diagnosis</th><th>Status</th><th>Action</th>
+</tr>
+{% for appointment in appointments %}
+<tr>
+<td>{{ appointment.id }}</td>
+<td>{{ appointment.patient.name }}</td>
+<td>{{ appointment.doctor.name }}</td>
+<td>{{ appointment.date }}</td>
+<td>{{ appointment.diagnosis }}</td>
+<td>{{ appointment.status }}</td>
+<td>
+<a href="/appointments/{{ appointment.id }}">View</a>
+<a href="/appointments/{{ appointment.id }}/edit">Edit</a>
+<form action="/appointments/{{ appointment.id }}" method="POST" class="inline"
+      onsubmit="return confirm('Cancel this appointment?')">
+<input type="hidden" name="_method" value="DELETE">
+<button type="submit">Delete</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

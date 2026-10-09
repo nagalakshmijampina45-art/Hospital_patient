@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ "Edit Doctor" if doctor else "Add Doctor" }}</h2>
+<form method="POST">
+    <label>Name</label>
+    <input name="name" value="{{ doctor.name if doctor else '' }}" required>
+
+    <label>Specialization</label>
+    <input name="specialization"
+           value="{{ doctor.specialization if doctor else '' }}" required>
+
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

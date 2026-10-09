@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Hospital Analytics Dashboard</h2>
+
+<div class="cards">
+<div class="card"><h3>Total Appointments</h3><p>{{ stats.total }}</p></div>
+<div class="card"><h3>Most Common Diagnosis</h3><p>{{ stats.common_diagnosis }}</p></div>
+<div class="card"><h3>Recovery Rate</h3><p>{{ stats.recovered_rate }}%</p></div>
+</div>
+
+<h3>Appointment Status Distribution</h3>
+<table>
+<tr><th>Status</th><th>Count</th></tr>
+{% for status, count in stats.statuses.items() %}
+<tr><td>{{ status }}</td><td>{{ count }}</td></tr>
+{% endfor %}
+</table>
+
+<h3>Doctor Performance</h3>
+<table>
+<tr><th>Doctor</th><th>Patients Treated</th><th>Recovery Rate</th></tr>
+{% for doctor in stats.doctor_performance %}
+<tr>
+<td>{{ doctor.doctor }}</td>
+<td>{{ doctor.patients_treated }}</td>
+<td>{{ doctor.recovery_rate }}%</td>
+</tr>
+{% endfor %}
+</table>
+
+<h3>Upload Appointment CSV</h3>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required>
+    <button type="submit">Upload CSV</button>
+</form>
+
+<p>
+<a class="button" href="/analytics/export/csv">Export CSV</a>
+<a class="button" href="/analytics/export/excel">Export Excel</a>
+</p>
+{% endblock %}

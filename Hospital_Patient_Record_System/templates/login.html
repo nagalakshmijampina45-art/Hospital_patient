@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <h2>Admin Login</h2>
+
+        <p class="login-subtitle">
+            Login to Hospital Management System
+        </p>
+
+        {% if error %}
+            <div class="error">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <form method="POST">
+
+            <label>Username</label>
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit" class="login-submit">
+                Login
+            </button>
+
+        </form>
+
+        <p class="login-info">
+            Default Login
+        </p>
+
+        <p>
+            Username: <b>admin</b>
+        </p>
+
+        <p>
+            Password: <b>admin123</b>
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

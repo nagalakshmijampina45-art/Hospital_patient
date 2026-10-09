@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="badge">
+                🏥 Smart Hospital Management
+            </span>
+
+            <h1>
+                Hospital Patient
+                <span>Record System</span>
+            </h1>
+
+            <p>
+                A simple and secure system to manage patients,
+                doctors, appointments and hospital analytics
+                in one place.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/login" class="primary-btn">
+                    Admin Login →
+                </a>
+
+                <a href="/patients" class="secondary-btn">
+                    View Patients
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hospital-card">
+
+            <div class="hospital-icon">
+                🏥
+            </div>
+
+            <h2>Hospital Management</h2>
+
+            <p>
+                Manage your hospital records efficiently
+                and securely.
+            </p>
+
+            <div class="card-items">
+
+                <div>
+                    <span>👨‍⚕️</span>
+                    <p>Doctors</p>
+                </div>
+
+                <div>
+                    <span>🧑‍🤝‍🧑</span>
+                    <p>Patients</p>
+                </div>
+
+                <div>
+                    <span>📅</span>
+                    <p>Appointments</p>
+                </div>
+
+                <div>
+                    <span>📊</span>
+                    <p>Analytics</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="section-title">
+
+        <span>OUR FEATURES</span>
+
+        <h2>
+            Everything You Need
+        </h2>
+
+        <p>
+            Manage hospital operations easily from one system.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <a href="/patients" class="feature-card">
+
+            <div class="feature-icon patient-icon">
+                🧑‍🤝‍🧑
+            </div>
+
+            <h3>Patient Management</h3>
+
+            <p>
+                Add, view and update patient information
+                quickly and easily.
+            </p>
+
+            <span class="learn-more">
+                Manage Patients →
+            </span>
+
+        </a>
+
+
+        <a href="/doctors" class="feature-card">
+
+            <div class="feature-icon doctor-icon">
+                👨‍⚕️
+            </div>
+
+            <h3>Doctor Management</h3>
+
+            <p>
+                Maintain doctor details and
+                specializations.
+            </p>
+
+            <span class="learn-more">
+                View Doctors →
+            </span>
+
+        </a>
+
+
+        <a href="/appointments" class="feature-card">
+
+            <div class="feature-icon appointment-icon">
+                📅
+            </div>
+
+            <h3>Appointments</h3>
+
+            <p>
+                Schedule and manage appointments
+                between patients and doctors.
+            </p>
+
+            <span class="learn-more">
+                View Appointments →
+            </span>
+
+        </a>
+
+
+        <a href="/analytics" class="feature-card">
+
+            <div class="feature-icon analytics-icon">
+                📊
+            </div>
+
+            <h3>Hospital Analytics</h3>
+
+            <p>
+                View treatment outcomes,
+                recovery rates and reports.
+            </p>
+
+            <span class="learn-more">
+                View Analytics →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="quick-section">
+
+    <div>
+
+        <span class="badge">
+            SECURE &amp; SIMPLE
+        </span>
+
+        <h2>
+            Manage Your Hospital
+            <span>With Confidence</span>
+        </h2>
+
+        <p>
+            Our hospital management system provides
+            organized records, appointment tracking,
+            secure authentication and useful analytics.
+        </p>
+
+    </div>
+
+    <div class="quick-stats">
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>Organized</span>
+        </div>
+
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>Accessible</span>
+        </div>
+
+        <div class="stat">
+            <strong>4+</strong>
+            <span>Modules</span>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

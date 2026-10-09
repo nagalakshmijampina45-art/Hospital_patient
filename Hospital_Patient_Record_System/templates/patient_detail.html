@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Patient Details</h2>
+<p><b>ID:</b> {{ patient.id }}</p>
+<p><b>Name:</b> {{ patient.name }}</p>
+<p><b>Age:</b> {{ patient.age }}</p>
+<p><b>Gender:</b> {{ patient.gender }}</p>
+<p><b>Contact:</b> {{ patient.contact }}</p>
+<a href="/patients/{{ patient.id }}/edit">Edit Patient</a>
+{% endblock %}

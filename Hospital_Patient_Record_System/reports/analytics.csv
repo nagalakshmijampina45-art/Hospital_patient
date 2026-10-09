@@ -1,0 +1,4 @@
+id,patient,doctor,date,diagnosis,status
+1,Ravi Kumar,Dr. Priya,2026-09-25,Heart Disease,Recovered
+2,Sita Devi,Dr. Anand,2026-09-30,Migraine,Under Treatment
+3,Arjun Rao,Dr. Meena,2026-10-05,Fever,Critical
